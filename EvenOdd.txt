@@ -1,0 +1,33 @@
+
+/*) Create a regular expression that
+describes a languages that has an even number of a’s and an odd number of b’s
+followed by ayn number of c’s or d’s, OR a patten of even occurrences of the string
+`cbad` */
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+public class Evenodd {
+  public static void main(String[] args) {
+
+    String value = "";
+
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("Enter a string ");
+    value = keyboard.nextLine();
+
+    /*
+     * boolean PatternMatch = Pattern.
+     * matches("([a-zA-Z0-9]+|[#!%$‘&+*–/= ?^_`{|}~])+.([a-zA-Z0-9]|[#!%$‘&+*–/= ?^_`{|}~])+"
+     * , Email);
+     */
+
+    boolean PatternMatch = 
+      Pattern.matches("((b*ab*ab*)*&&(a*ba*ba*)*(a*ba*))(c|d)*|(cbadcbad)*", value);
+//((b*ab*ab*)*&&(a*ba*ba*)*(a*ba*))(c|d)*|(cbadcbad)*",
+    if (PatternMatch) {
+      System.out.println("Valid string");
+    } else {
+      System.out.println("Not a valid string");
+    }
+  }
+}
