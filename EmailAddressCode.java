@@ -2,7 +2,7 @@
 import java.util.regex.Pattern;
 import java.util.Scanner;
 
-public class emailaddresscode {
+public class Emailaddresscode {
   public static void main(String[] args) {
 
   
